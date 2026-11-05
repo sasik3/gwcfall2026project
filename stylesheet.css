@@ -1,0 +1,44 @@
+:root {
+  --platinum: #edf1f5;
+  --soft-blush: #f9e6e6;
+  --pearl-aqua: #b0d8cf;
+  --azure-mist: #dbf1f7;
+  --verdigris: #0ea094;
+  --pine-teal: #0f433e;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: var(--platinum);
+  color: var(--pine-teal);
+}
+
+h1, h2, h3 {
+  font-family: "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+a { color: inherit; }
+button, input, select, textarea { font: inherit; }
+
+.page-home {
+  background-color: var(--soft-blush);
+}
+
+.page-about, .page-quiz {
+  background-color: var(--pearl-aqua);
+}
+
+.page-initiatives {
+  background-color: var(--platinum);
+}
+
+.page-opportunities {
+  background-color: var(--pine-teal);
+  color: #ffffff;
+}
