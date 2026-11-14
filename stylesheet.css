@@ -42,7 +42,6 @@ button, input, select, textarea { font: inherit; }
   background-color: var(--pine-teal);
   color: #ffffff;
 }
-/* Opportunities Quiz Page */
 
 body {
     background-color: #b0d8cf;
@@ -140,4 +139,98 @@ body > p {
 /* Hover effect */
 .answer-options button:hover {
     background-color: #087f76;
+}
+
+body.page-opportunities {
+  background-color: var(--pine-teal);
+  color: #ffffff;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+.page-opportunities h1 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.page-opportunities h2 {
+  color: var(--pearl-aqua);
+  margin: 30px 0;
+}
+
+.page-opportunities .intro {
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: bold;
+  max-width: 650px;
+  margin: 0 auto 35px;
+  line-height: 1.6;
+}
+
+/* Grid of cards */
+.page-opportunities .boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Individual card */
+.page-opportunities .box {
+  background-color: var(--soft-blush);
+  color: var(--pine-teal);
+  border-radius: 25px;
+  padding: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-opportunities .resourcename {
+  color: var(--pine-teal);
+  margin: 0 0 12px;
+}
+
+/* Category tag */
+.page-opportunities .box h5 {
+  align-self: flex-start;
+  background-color: var(--pearl-aqua);
+  color: var(--pine-teal);
+  font-size: 14px;
+  margin: 0 0 15px;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.page-opportunities .box p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+
+/* Button pinned to bottom of card */
+.page-opportunities .externalbutton {
+  margin-top: auto;
+  align-self: flex-start;
+  background-color: var(--verdigris);
+  color: var(--pine-teal);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 15px;
+}
+
+.page-opportunities .externalbutton:hover {
+  background-color: #087f76;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .page-opportunities .boxes { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .page-opportunities .boxes { grid-template-columns: 1fr; }
 }
