@@ -42,3 +42,102 @@ button, input, select, textarea { font: inherit; }
   background-color: var(--pine-teal);
   color: #ffffff;
 }
+/* Opportunities Quiz Page */
+
+body {
+    background-color: #b0d8cf;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* Main heading */
+h1 {
+    color: white;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Introduction text */
+body > p {
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    max-width: 650px;
+    margin: 0 auto 35px;
+    line-height: 1.6;
+}
+
+/* Quiz layout */
+.quiz-container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Pink question card */
+.question-card {
+    background-color: #f9e6e6;
+    border-radius: 25px;
+    padding: 35px;
+    text-align: left;
+}
+
+/* Progress text */
+.progress {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555555;
+}
+
+/* Question heading */
+.question-card h2 {
+    font-size: 25px;
+    color: #333333;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Answer choices */
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual answer buttons */
+.answer-options button {
+    background-color: #0ea094;
+    color: #0f433e;
+    border: none;
+    border-radius: 15px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+}
+
+/* Letter boxes */
+.choice-letter {
+    background-color: #c8d1d9;
+    color: #333333;
+    min-width: 32px;
+    height: 32px;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover effect */
+.answer-options button:hover {
+    background-color: #087f76;
+}
