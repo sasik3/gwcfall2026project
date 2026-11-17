@@ -729,4 +729,51 @@ footer {
     .stats-grid,
     .initiatives-grid { grid-template-columns: 1fr; }
 }
+       .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px auto;
+            max-width: 900px;
+            padding: 0 16px;
+        }
 
+        .filter-btn {
+            font: inherit;
+            font-weight: bold;
+            padding: 10px 18px;
+            border: 2px solid var(--pearl-aqua);
+            border-radius: 15px;
+            background: var(--pearl-aqua);
+            color: var(--pine-teal);
+            cursor: pointer;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        .filter-btn:hover {
+            background: var(--soft-blush);
+            border-color: var(--soft-blush);
+        }
+
+        .filter-btn:focus-visible {
+            outline: 3px solid var(--soft-blush);
+            outline-offset: 2px;
+        }
+
+        .filter-btn.active {
+            background: var(--verdigris);
+            border-color: #ffffff;
+            color: var(--pine-teal);
+        }
+
+        .filter-status {
+            text-align: center;
+            margin: 0 0 16px;
+            color: var(--pearl-aqua);
+            font-weight: bold;
+        }
+
+        .box[hidden] {
+            display: none !important;
+        }
