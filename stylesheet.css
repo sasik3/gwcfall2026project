@@ -605,3 +605,128 @@ footer {
     }
 }
 
+/* PAGE HEADER */
+.page-header {
+    min-height: auto;
+    text-align: center;
+    padding: 60px 4%;
+}
+
+.page-header h1 {
+    font-size: clamp(42px, 7vw, 68px);
+    font-weight: 900;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.page-subtitle {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1.6;
+    color: white;
+}
+
+/* STATISTICS */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.stat-card {
+    background: var(--nav-pink);
+    border-radius: 25px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--teal);
+}
+
+.stat-label {
+    font-size: 16px;
+    font-weight: 800;
+    color: #174f4a;
+}
+
+/* INITIATIVES */
+.initiatives-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.initiative-card {
+    background: white;
+    border-radius: 25px;
+    padding: 25px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.initiative-image {
+    background: var(--light-aqua);
+    border: 2px dashed var(--teal);
+    border-radius: 15px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--teal);
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.initiative-tag {
+    align-self: flex-start;
+    background: var(--nav-green);
+    color: #174f4a;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+}
+
+.initiative-card h3 {
+    font-size: 24px;
+    color: #079c91;
+    margin-bottom: 10px;
+}
+
+.initiative-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 15px;
+    max-width: none;
+}
+
+.initiative-details {
+    padding-left: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .initiatives-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .stats-grid,
+    .initiatives-grid { grid-template-columns: 1fr; }
+}
+
