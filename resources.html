@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Opportunities Page! </title>
+
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body class="page-opportunities">
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+
+    <div class="brand">
+        <div class="gwc-logo">
+            girls who
+            <span>CODE</span>
+        </div>
+
+        <div class="x-mark">×</div>
+
+        <div class="ut-seal">★</div>
+    </div>
+
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="pastinitiatives.html">Past Initiatives</a>
+        <a href="about.html">About</a>
+        <a href="resources.html">Opportunities</a>
+        <a href="opportunities.html">Matching Quiz</a>
+    </div>
+
+  </nav>
+
+  <h1 class="float">Opportunities Database!</h1>
+  <p class="intro">Looking for career events, funding, mentoring, or leadership experience? Check out these opportunities from Girls Who Code!</p>
+  <h2>Opportunities</h2>
+
+  <!-- FILTER BUTTONS (filled in automatically by the script below) -->
+  <div class="filters" id="filters" role="group" aria-label="Filter opportunities by category"></div>
+  <p class="filter-status" id="filterStatus" aria-live="polite"></p>
+
+  <div class="boxes">
+    <div class="box">
+      <h3 class="resourcename">Rewrite The Code Virtual Career Summit</h3>
+      <h5>Category: Career Events</h5>
+      <p>Virtual career fairs where you can network directly with recruiters and get career advice.</p>
+      <a href="https://rewritingthecode.org/virtual-career-summit/" class="externalbutton">Check This Out!</a>
+    </div>
+
+    <div class="box">
+      <h3 class="resourcename">Girls Who Code Upskill Series</h3>
+      <h5>Category: Workshops</h5>
+      <p>Free virtual workshops covering resume reviews, technical interview prep, networking, and breaking into AI.</p>
+      <a href="https://girlswhocode.com/upskill-series" class="externalbutton">Check This Out!</a>
+    </div>
+
+    <div class="box">
+      <h3 class="resourcename">Girls Who Code Work College And Career Programs</h3>
+      <h5>Category: Career Readiness</h5>
+      <p>Career-readiness sessions and company deep-dives hosted with major corporate partners like JPMorgan Chase and MetLife.</p>
+      <a href="https://girlswhocode.com/programs/college-and-career" class="externalbutton">Check This Out!</a>
+    </div>
+
+    <div class="box">
+      <h3 class="resourcename">Girls Who Code 18+ Alumni Discord</h3>
+      <h5>Category: Community</h5>
+      <p>A national community server for CS homework help, internship advice, peer referrals, and early event access.</p>
+      <a href="https://girlswhocode.com/get-involved/alumni" class="externalbutton">Check This Out!</a>
+    </div>
+
+    <div class="box">
+      <h3 class="resourcename">2027 Women Who Code Leadership Summit</h3>
+      <h5>Category: Career Readiness</h5>
+      <p>A three-day summit held in New York with talks and workshops</p>
+      <a href="https://womenwhocode.com/" class="externalbutton">Check This Out!</a>
+    </div>
+
+    <div class="box">
+      <h3 class="resourcename">Rewrite The Code Student Community</h3>
+      <h5>Category: Community</h5>
+      <p>A free way to find opportunities and meet other students!</p>
+      <a href="https://rewritingthecode.org/students/" class="externalbutton">Check This Out!</a>
+    </div>
+
+    <div class="box">
+      <h3 class="resourcename">SheCodes Free Coding Classes</h3>
+      <h5>Category: Classes</h5>
+      <p>A free 60 minute class for learning HTML, CSS, and JavaScript!</p>
+      <a href="https://www.shecodes.io/free-class/coding" class="externalbutton">Check This Out!</a>
+    </div>
+
+    <div class="box">
+      <h3 class="resourcename">Women Can Code Vibe Coding Course</h3>
+      <h5>Category: Career Readiness</h5>
+      <p>A mini course for creating a product while learning about vibe coding</p>
+      <a href="https://womencancode.com/vibe-code" class="externalbutton">Check This Out!</a>
+    </div>
+
+    <div class="box">
+      <h3 class="resourcename">2027 Internships Github Repository</h3>
+      <h5>Category: Career Readiness</h5>
+      <p>A GitHub repository that lists over 1000 internships to apply to!</p>
+      <a href="https://github.com/SimplifyJobs/Summer2027-Internships" class="externalbutton">Check This Out!</a>
+    </div>
+
+    <div class="box">
+      <h3 class="resourcename">CodePath Web Development</h3>
+      <h5>Category: Classes</h5>
+      <p>Free, instructor-led courses where students build web development skills through hands-on projects.</p>
+      <a href="https://www.codepath.org/courses/web-development" class="externalbutton">Check This Out!</a>
+    </div>
+
+    <div class="box">
+      <h3 class="resourcename">CodePath Technical Interview Prep</h3>
+      <h5>Category: Career Readiness</h5>
+      <p>Free courses for college CS students to practice algorithms, problem-solving, and technical interview skills. Check the site for application dates and eligibility.</p>
+      <a href="https://www.codepath.org/courses/tech-interview-prep" class="externalbutton">Check This Out!</a>
+    </div>
+
+    <div class="box">
+      <h3 class="resourcename">Major League Hacking Global Hack Week</h3>
+      <h5>Category: Workshops</h5>
+      <p>Free online events where you can learn technical skills, build portfolio projects, and connect with other programmers. Open to participants anywhere!</p>
+      <a href="https://ghw.mlh.com/" class="externalbutton">Check This Out!</a>
+    </div>
+
+  </div>
+
+  <script>
+    // Category filtering: reads each box's "Category: ..." line, builds a button
+    // for every unique category, and shows/hides boxes based on what's selected.
+    // Select one or more categories; select none (or click "All") to see everything.
+    (function () {
+      var filtersEl = document.getElementById('filters');
+      var statusEl = document.getElementById('filterStatus');
+      var boxes = Array.prototype.slice.call(document.querySelectorAll('.boxes .box'));
+      var selected = []; // currently active categories
+
+      // 1. Tag each box with its category and collect the unique list
+      var categories = [];
+      boxes.forEach(function (box) {
+        var label = box.querySelector('h5');
+        var cat = label ? label.textContent.replace(/^\s*Category:\s*/i, '').trim() : '';
+        box.dataset.category = cat;
+        if (cat && categories.indexOf(cat) === -1) categories.push(cat);
+      });
+      categories.sort();
+
+      // 2. Build the buttons
+      function makeButton(text, value) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'filter-btn';
+        btn.textContent = text;
+        btn.dataset.value = value;
+        btn.setAttribute('aria-pressed', 'false');
+        filtersEl.appendChild(btn);
+        return btn;
+      }
+
+      var allBtn = makeButton('All', '');
+      categories.forEach(function (cat) { makeButton(cat, cat); });
+
+      // 3. Apply the current selection
+      function applyFilters() {
+        var shown = 0;
+        boxes.forEach(function (box) {
+          var match = selected.length === 0 || selected.indexOf(box.dataset.category) !== -1;
+          box.hidden = !match;
+          if (match) shown++;
+        });
+
+        Array.prototype.forEach.call(filtersEl.querySelectorAll('.filter-btn'), function (btn) {
+          var on = btn === allBtn ? selected.length === 0 : selected.indexOf(btn.dataset.value) !== -1;
+          btn.classList.toggle('active', on);
+          btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+      }
+
+      // 4. Handle clicks
+      filtersEl.addEventListener('click', function (e) {
+        var btn = e.target.closest('.filter-btn');
+        if (!btn) return;
+
+        if (btn === allBtn) {
+          selected = [];
+        } else {
+          var i = selected.indexOf(btn.dataset.value);
+          if (i === -1) selected.push(btn.dataset.value);
+          else selected.splice(i, 1);
+        }
+        applyFilters();
+      });
+
+      applyFilters();
+    })();
+  </script>
+</body>
+
+</html>
