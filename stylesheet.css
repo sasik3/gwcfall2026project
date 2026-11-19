@@ -42,9 +42,12 @@ button, input, select, textarea { font: inherit; }
   background-color: var(--pine-teal);
   color: #ffffff;
 }
-/* Opportunities Quiz Page */
+/* =================================
+   OPPORTUNITIES QUIZ PAGE
+================================= */
 
-body {
+/* Page background and font */
+.page-quiz {
     background-color: #b0d8cf;
     font-family: "Trebuchet MS", Arial, sans-serif;
     text-align: center;
@@ -53,16 +56,16 @@ body {
 }
 
 /* Main heading */
-h1 {
+.page-quiz h1 {
     color: white;
-    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-family: "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
     font-size: 42px;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
 /* Introduction text */
-body > p {
+.page-quiz .quiz-intro {
     color: white;
     font-size: 19px;
     font-weight: bold;
@@ -72,28 +75,33 @@ body > p {
 }
 
 /* Quiz layout */
-.quiz-container {
+.page-quiz .quiz-container {
     max-width: 650px;
     margin: 0 auto;
 }
 
 /* Pink question card */
-.question-card {
+.page-quiz .question-card {
     background-color: #f9e6e6;
     border-radius: 25px;
     padding: 35px;
     text-align: left;
 }
 
+/* Hide inactive questions */
+.page-quiz .question-card[hidden] {
+    display: none !important;
+}
+
 /* Progress text */
-.progress {
+.page-quiz .progress {
     font-size: 16px;
     font-weight: bold;
     color: #555555;
 }
 
 /* Question heading */
-.question-card h2 {
+.page-quiz .question-card h2 {
     font-size: 25px;
     color: #333333;
     margin-bottom: 30px;
@@ -101,14 +109,14 @@ body > p {
 }
 
 /* Answer choices */
-.answer-options {
+.page-quiz .answer-options {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
 /* Individual answer buttons */
-.answer-options button {
+.page-quiz .answer-options button {
     background-color: #0ea094;
     color: #0f433e;
     border: none;
@@ -122,10 +130,11 @@ body > p {
     align-items: center;
     gap: 15px;
     text-align: left;
+    font-family: inherit;
 }
 
 /* Letter boxes */
-.choice-letter {
+.page-quiz .choice-letter {
     background-color: #c8d1d9;
     color: #333333;
     min-width: 32px;
@@ -138,6 +147,29 @@ body > p {
 }
 
 /* Hover effect */
-.answer-options button:hover {
+.page-quiz .answer-options button:hover {
     background-color: #087f76;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    .page-quiz {
+        padding: 25px 15px;
+    }
+
+    .page-quiz h1 {
+        font-size: 32px;
+    }
+
+    .page-quiz .question-card {
+        padding: 25px 20px;
+    }
+
+    .page-quiz .question-card h2 {
+        font-size: 21px;
+    }
+}
+
+[hidden] {
+    display: none !important;
 }

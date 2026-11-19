@@ -11,16 +11,49 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 
-<body>
+<body class="page-quiz">
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+
+        <div class="brand">
+            <div class="gwc-logo">
+                girls who
+                <span>CODE</span>
+            </div>
+
+            <div class="x-mark">×</div>
+
+            <div class="ut-seal">★</div>
+        </div>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="pastinitiatives.html">Past Initiatives</a>
+            <a href="about.html">About</a>
+            <a href="resources.html">Opportunities</a>
+            <a href="opportunities.html">Matching Quiz</a>
+        </div>
+
+    </nav>
+
+
+    <!-- QUIZ INTRODUCTION -->
 
     <h1>Find your CS match!</h1>
 
-    <p>
+    <p class="quiz-intro">
         Not sure where to start? Take our quick quiz to discover
         CS opportunities that fit your interests and goals!
     </p>
 
+
+    <!-- QUIZ CONTAINER -->
+
     <div class="quiz-container">
+
+
+        <!-- QUESTION 1 -->
 
         <div class="question-card">
 
@@ -30,22 +63,22 @@
 
             <div class="answer-options">
 
-                <button>
+                <button type="button">
                     <span class="choice-letter">A</span>
                     <span>I'm completely new to coding</span>
                 </button>
 
-                <button>
+                <button type="button">
                     <span class="choice-letter">B</span>
                     <span>I know some basic programming</span>
                 </button>
 
-                <button>
+                <button type="button">
                     <span class="choice-letter">C</span>
                     <span>I've built a few coding projects</span>
                 </button>
 
-                <button>
+                <button type="button">
                     <span class="choice-letter">D</span>
                     <span>I'm an experienced programmer</span>
                 </button>
@@ -54,7 +87,168 @@
 
         </div>
 
+
+        <!-- QUESTION 2 -->
+
+        <div class="question-card" hidden>
+
+            <p class="progress">Question 2/5</p>
+
+            <h2>What area of computer science interests you most?</h2>
+
+            <div class="answer-options">
+
+                <button type="button">
+                    <span class="choice-letter">A</span>
+                    <span>Artificial Intelligence and Machine Learning</span>
+                </button>
+
+                <button type="button">
+                    <span class="choice-letter">B</span>
+                    <span>Web and App Development</span>
+                </button>
+
+                <button type="button">
+                    <span class="choice-letter">C</span>
+                    <span>Cybersecurity</span>
+                </button>
+
+                <button type="button">
+                    <span class="choice-letter">D</span>
+                    <span>Game Development</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 3 -->
+
+        <div class="question-card" hidden>
+
+            <p class="progress">Question 3/5</p>
+
+            <h2>What kind of experience are you looking for?</h2>
+
+            <div class="answer-options">
+
+                <button type="button">
+                    <span class="choice-letter">A</span>
+                    <span>Learning new skills through workshops</span>
+                </button>
+
+                <button type="button">
+                    <span class="choice-letter">B</span>
+                    <span>Working on real-world projects</span>
+                </button>
+
+                <button type="button">
+                    <span class="choice-letter">C</span>
+                    <span>Meeting mentors and networking</span>
+                </button>
+
+                <button type="button">
+                    <span class="choice-letter">D</span>
+                    <span>Competing in hackathons and competitions</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 4 -->
+
+        <div class="question-card" hidden>
+
+            <p class="progress">Question 4/5</p>
+
+            <h2>How much time can you dedicate?</h2>
+
+            <div class="answer-options">
+
+                <button type="button">
+                    <span class="choice-letter">A</span>
+                    <span>A few hours per month</span>
+                </button>
+
+                <button type="button">
+                    <span class="choice-letter">B</span>
+                    <span>A few hours per week</span>
+                </button>
+
+                <button type="button">
+                    <span class="choice-letter">C</span>
+                    <span>Several hours per week</span>
+                </button>
+
+                <button type="button">
+                    <span class="choice-letter">D</span>
+                    <span>I'm flexible and can commit regularly</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 5 -->
+
+        <div class="question-card" hidden>
+
+            <p class="progress">Question 5/5</p>
+
+            <h2>What type of opportunity interests you most?</h2>
+
+            <div class="answer-options">
+
+                <button type="button">
+                    <span class="choice-letter">A</span>
+                    <span>Summer programs and camps</span>
+                </button>
+
+                <button type="button">
+                    <span class="choice-letter">B</span>
+                    <span>Internships</span>
+                </button>
+
+                <button type="button">
+                    <span class="choice-letter">C</span>
+                    <span>Clubs and student organizations</span>
+                </button>
+
+                <button type="button">
+                    <span class="choice-letter">D</span>
+                    <span>Online courses and certifications</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESULTS SCREEN -->
+
+        <div class="question-card" id="results" hidden>
+
+            <h2>You've completed the quiz!</h2>
+
+            <p>
+                Thanks for answering all five questions.
+                Your CS opportunities matches are below!
+            </p>
+
+        </div>
+
+
     </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="quiz.js"></script>
 
 </body>
 </html>
+
